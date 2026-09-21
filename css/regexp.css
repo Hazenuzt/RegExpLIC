@@ -1,0 +1,78 @@
+/* ===== Estilos generales de la tarjeta ===== */
+body {
+    background: linear-gradient(135deg, #eaf6ff 0%, #d4ecfb 100%);
+    min-height: 100vh;
+}
+
+h4 {
+    color: #1b6ca8;
+    font-weight: 700;
+}
+
+h6 {
+    color: #5b8ba8;
+    margin-bottom: 0.75rem;
+}
+
+/* ===== Lista de requisitos ===== */
+small ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.25rem;
+}
+
+small ul li {
+    position: relative;
+    padding: 0.4rem 0 0.4rem 1.8rem;
+    font-size: 0.92rem;
+    color: #8a94a3;
+    transition: color 0.3s ease;
+}
+
+
+/* ===== Input de contraseña ===== */
+#txtpass {
+    border: 2px solid #dee2e6;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#txtpass:focus {
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.2rem rgba(126, 200, 242, 0.25);
+}
+
+/* ===== Label de resultado ===== */
+#lblresult {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    min-width: 180px;
+    text-align: center;
+}
+
+
+#lblresult.text-danger {
+    background-color: rgba(242, 139, 157, 0.15);
+    color: #d9607a !important;
+}
+
+#lblresult.text-warning {
+    background-color: rgba(255, 214, 130, 0.2);
+    color: #d9a441 !important;
+}
+
+#lblresult.text-info {
+    background-color: rgba(126, 200, 242, 0.2);
+    color: #3a9bd1 !important;
+}
+
+#lblresult.text-success {
+    background-color: rgba(79, 195, 161, 0.18);
+    color: #3aab86 !important;
+}
+

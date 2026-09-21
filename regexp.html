@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/regexp.css" rel="stylesheet" />
+        <title>Probador de contraseñas </title>
+    </head>
+
+    <body>
+        <div class="container-md">
+            <div class="row">
+                <div class="col-6 mx-auto">
+                    <div class="shadow-lg p-3 mt-5 bg-body rounded">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>Probador de contraseñas seguras</h4>
+                                <h6>Para que tu contraseña sea segura debe de tener: </h6>
+                                <small>
+                                    <ul>
+                                        <li id="minreq">Mínimo 8 caracteres</li>
+                                        <li id="mayu">Al menos una mayúscula (A-Z)</li>
+                                        <li id="min">Al menos una minúscula (a-z)</li>
+                                        <li id="num">Al menos un número (0-9)</li>
+                                        <li id="esp">Al menos un carácter especial (!@#$%^&*/)</li>
+                                        <li id="espacios">No tener espacios en blanco</li>
+                                    </ul>
+                                </small>
+                                <form id="frmpassword">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-floating mb-3">
+                                                <input type="input" class="form-control" id="txtpass" placeholder="Escriba la contraseña que desea probar">
+                                                <label for="txtpass">
+                                                    <i class="bi bi-person">Ingresa la contraseña a probar</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <label id="lblresult" for="txtpass" class="fw-bold"></label>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <button id="btnmostrar" type="button" class="btn btn-info">
+                                                Ver más...
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div id="info" class="d-none shadow-lg p-3 mt-5 bg-body rounded">
+                        <div class="row">
+                            <div class="col-12">
+                                <div>
+                                    El ejemplo presentado ocupa de expresiones regulares para poder validar en
+                                    tiempo real (por medio del evento input) si cumple o no con los criterios de 
+                                    seguridad estándar.
+                                    Expresiones regulares utilizadas:
+                                    <ul>
+                                        <li>/.{8,}/ → verifica que si existen mínimo 8 carácteres en el input</li>
+                                        <li>/[A-Z]/ → verifica que se encuentre al menos una mayúscula/</li>
+                                        <li>/[a-z]/ → verifica que exista al menos una minúscula/</li>
+                                        <li>/[0-9]/ → verifica que exista al menos un número</li>
+                                        <li>/[!@#%$&^*/]/ → verifica que exista un carácter especial</li>
+                                        <li>/^\S+$/ →verifica que no existan espacios en blanco en toda la cadena</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="js/regexp.js" defer></script>
+
+    </body>
+
+</html>
